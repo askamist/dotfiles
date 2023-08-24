@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
 echo "Hey There"
+
+// TODO: Install brew
+
+// install vim
+brew install vim git
+
+ln -s .vim ~/.vim
+ln -s .gitconfig ~/.gitconfig
