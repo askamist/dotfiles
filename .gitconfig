@@ -1,0 +1,40 @@
+[core]
+  whitespace = nowarn
+  pager = less
+  editor = vim
+[user]
+  name = S K Amarnath
+  email = askamist@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  spull = !git checkout master && git-svn fetch && git-svn rebase
+  spush = !git checkout master && git-svn dcommit
+  send = !git spull && git spush
+  co = checkout
+  ci = commit
+  ca = commit -a
+  br = branch
+  st = status
+  df = diff
+  dfs = diff --cached
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
+  hub = !git daemon --base-path=. --export-all --enable=receive-pack --reuseaddr --informative-errors --verbose
+[push]
+  default = simple
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[init]
+  defaultBranch = main 
