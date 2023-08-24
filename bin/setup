@@ -9,3 +9,5 @@ brew install vim git
 
 ln -s .vim ~/.vim
 ln -s .gitconfig ~/.gitconfig
+
+git clone https://github.com/gpakosz/.tmux
