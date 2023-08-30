@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-echo "Hey There"
 
-// TODO: Install brew
+# TODO: check and Install brew
+# TODO: brew bundle
 
-// install vim
-brew install vim git
+[ -d .tmux ] || git clone https://github.com/gpakosz/.tmux.git
 
-ln -s .vim ~/.vim
-ln -s .gitconfig ~/.gitconfig
-
-git clone https://github.com/gpakosz/.tmux
+ln -s -f $(realpath vimrc) ~/.vimrc
+ln -s -f $(realpath gitconfig) ~/.gitconfig
+ln -s -f $(realpath .tmux/.tmux.conf) ~/.tmux.conf
+ln -s -f $(realpath tmux.conf.local) ~/.tmux.conf.local
+ln -s -f $(realpath irbrc) ~/.pryrc
+ln -s -f $(realpath irbrc) ~/.irbrc
