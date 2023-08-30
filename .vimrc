@@ -7,6 +7,8 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
+" Install Plug unless it is already installed, makes this rc indipendent of
+" Plug installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
 	  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
