@@ -4,11 +4,10 @@
 # TODO: check and Install brew
 # TODO: brew bundle
 
-[ -d .tmux ] || git clone https://github.com/gpakosz/.tmux.git
-
 ln -s -f $(realpath vimrc) ~/.vimrc
 ln -s -f $(realpath gitconfig) ~/.gitconfig
-ln -s -f $(realpath .tmux/.tmux.conf) ~/.tmux.conf
+ln -s -f $(realpath tmux.conf) ~/.tmux.conf
 ln -s -f $(realpath tmux.conf.local) ~/.tmux.conf.local
 ln -s -f $(realpath irbrc) ~/.pryrc
 ln -s -f $(realpath irbrc) ~/.irbrc
+ln -s -f $(realpath wezterm.lua) ~/.wezterm.lua
