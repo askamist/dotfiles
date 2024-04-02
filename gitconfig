@@ -21,6 +21,7 @@
   df = diff
   dfs = diff --cached
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lb = branch --format '%(refname:short) -> %(upstream)'
   serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
   hub = !git daemon --base-path=. --export-all --enable=receive-pack --reuseaddr --informative-errors --verbose
 [push]
@@ -36,7 +37,12 @@
 [mergetool "sourcetree"]
   cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
-[init]
-	defaultBranch = main 
 [include]
-	path=.gitconfig-custom
+  path = .gitconfig-custom
+[includeIf "gitdir:~/Code/ts"]
+  path = ~/Code/ts/.gitconfig
+[init]
+	defaultBranch = master
+[maintenance]
+	repo = /Users/amarnathsk/Code/ts/thoughtspot
+	repo = /Users/amarnathsk/Code/mode/webapp
