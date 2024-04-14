@@ -8,6 +8,6 @@ ln -s -f $(realpath vimrc) ~/.vimrc
 ln -s -f $(realpath gitconfig) ~/.gitconfig
 ln -s -f $(realpath tmux.conf) ~/.tmux.conf
 ln -s -f $(realpath tmux.conf.local) ~/.tmux.conf.local
-ln -s -f $(realpath irbrc) ~/.pryrc
-ln -s -f $(realpath irbrc) ~/.irbrc
-ln -s -f $(realpath wezterm.lua) ~/.wezterm.lua
+# ln -s -f $(realpath irbrc) ~/.pryrc
+# ln -s -f $(realpath irbrc) ~/.irbrc
+# ln -s -f $(realpath wezterm.lua) ~/.wezterm.lua

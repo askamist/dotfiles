@@ -1,0 +1,5 @@
+tap "homebrew/bundle"
+brew "git"
+brew "tmux"
+brew "vim"
+cask "google-chrome"
