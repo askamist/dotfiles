@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
+brew "fish"
 brew "git"
 brew "tmux"
 brew "vim"
 cask "google-chrome"
+cask "iterm2"
